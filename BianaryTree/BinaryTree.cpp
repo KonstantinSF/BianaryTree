@@ -103,7 +103,7 @@ public:
 		cout << endl; 
 	}
 private:
-	void insert(int Data, Element* Root)
+	void insert(int Data, Element*& Root)
 	{
 		if (this->Root == nullptr) this->Root = new Element(Data); 
 		if (Root == nullptr) return; //условие выхода из рекурсии
@@ -188,7 +188,6 @@ private:
 		clear(Root->pRight); 
 		delete Root; 
 	}
-
 	void print(Element* Root)const
 	{
 		if (Root == nullptr)return; 
